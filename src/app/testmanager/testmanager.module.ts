@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TestmanagerRoutingModule } from './testmanager-routing.module';
 import { TestComponent } from './test/test.component';
 import { MaterialModule } from '../shared/material.module';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { MaterialModule } from '../shared/material.module';
     TestmanagerRoutingModule,
     MaterialModule
   ],
-  declarations: [TestComponent]
+  declarations: [TestComponent, QuestionComponent]
 })
 export class TestmanagerModule { }
