@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
+  Answer: string;
+  Body: string = "Dog Fish Taco!";
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

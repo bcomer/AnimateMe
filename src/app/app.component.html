@@ -1,10 +1,10 @@
 <header>
-    <mat-toolbar>
-        <span>Buck Shot!</span>
+    <mat-toolbar class="mat-elevation-z2">
+        <span>Hogan</span>
     </mat-toolbar>
 </header>
-<div class="wrapper mat-typography">
-    <router-outlet></router-outlet>
+<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" class="wrapper mat-typography">
+    <router-outlet #o="outlet"></router-outlet>
 </div>
 
 
