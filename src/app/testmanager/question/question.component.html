@@ -1,9 +1,9 @@
 <mat-card>
   <mat-card-content>
     <p>
-      {{Body}}
+      {{Question.body}}
     </p>
-    <mat-radio-group [(ngModel)]="Answer">
+    <mat-radio-group [(ngModel)]="Question.answer">
       <mat-radio-button value="Strongly Agree">Strongly Agree</mat-radio-button>
       <mat-radio-button value="Agree">Agree</mat-radio-button>
       <mat-radio-button value="Disagree">Disagree</mat-radio-button>
@@ -11,6 +11,6 @@
     </mat-radio-group>
   </mat-card-content>
   <mat-card-actions>
-    <a mat-flat-button routerLink=".">Next Question</a>
+    <a mat-flat-button [routerLink]="['/question', Question.nextQuestionId]">Next Question</a>
   </mat-card-actions>
 </mat-card>
