@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Question } from '../models/question';
+import { HoganSelectService } from '../../services/hogan-select.service';
 
 @Component({
   selector: 'app-question',
@@ -8,10 +9,11 @@ import { Question } from '../models/question';
 })
 export class QuestionComponent implements OnInit {
 
-  @Input() Question: Question;  
+  Question: Question;  
 
-  constructor() { }
+  constructor(private service: HoganSelectService) { }
 
   ngOnInit() {
+    this.Question = {id: 1, answer: 'bu', body: 'stuff', nextQuestionId: 2};
   }
 }
